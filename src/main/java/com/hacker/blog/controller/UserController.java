@@ -2,7 +2,7 @@ package com.hacker.blog.controller;
 
 import com.hacker.blog.entity.Result;
 import com.hacker.blog.entity.User;
-import com.hacker.blog.service.UserService;
+import com.hacker.blog.service.impl.UserServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 @RestController
 public class UserController {
     @Resource
-    private UserService userService;
+    private UserServiceImpl userService;
 
     /**
      * 查找所有用户信息
@@ -66,8 +66,8 @@ public class UserController {
      * @param userId 用户ID
      */
     @DeleteMapping("/users/{user_id}")
-    public void deleteUserById(@PathVariable("user_id") Long userId) {
-        userService.deleteUserById(userId);
+    public Result deleteUserById(@PathVariable("user_id") Long userId) {
+        return  userService.deleteUserById(userId);
     }
 
 

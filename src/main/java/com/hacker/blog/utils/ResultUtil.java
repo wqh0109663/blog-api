@@ -38,5 +38,11 @@ public class ResultUtil {
         objectResult.setMessage(message);
         return objectResult;
     }
+    public static Result successNoContent() {
+        Result<Object> objectResult = new Result<>();
+        objectResult.setCode(ResultEnum.OK.getCode());
+        objectResult.setMessage(ResultEnum.OK.getMessage());
+        return objectResult;
+    }
 
 }
