@@ -1,4 +1,4 @@
-package com.hacker.blog.entity;
+package com.hacker.blog.result;
 
 
 import lombok.Data;
@@ -14,7 +14,7 @@ import lombok.ToString;
 @ToString
 public class Result<T> {
     /**
-     * 错误状态码
+     * 状态码
      */
     private Integer code;
     /**

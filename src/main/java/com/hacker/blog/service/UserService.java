@@ -1,7 +1,9 @@
 package com.hacker.blog.service;
 
-import com.hacker.blog.entity.Result;
+import com.hacker.blog.result.Result;
 import com.hacker.blog.entity.User;
+
+import java.util.List;
 
 /**
  * @author wqh
@@ -14,7 +16,7 @@ public interface UserService {
      * @param userId 用户ID
      * @return 用户对象
      */
-    Result getOneUser(Long userId);
+    User getOneUser(Long userId);
 
     /**
      * 添加用户
@@ -22,14 +24,14 @@ public interface UserService {
      * @param user 用户对象
      * @return 添加成功的用户对象
      */
-    Result addUser(User user);
+    User addUser(User user);
 
     /**
      * 查找所有用户
      *
      * @return 用户集合
      */
-    Result getAllUser();
+    List<User> getAllUser();
 
     /**
      * 更新用户
@@ -37,7 +39,7 @@ public interface UserService {
      * @param user 用户对象
      * @return 返回更新后的用户对象
      */
-    Result updateUser(User user);
+    User updateUser(User user);
 
     /**
      * 根据ID删除用户

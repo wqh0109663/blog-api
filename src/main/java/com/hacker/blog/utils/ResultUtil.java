@@ -1,7 +1,7 @@
 package com.hacker.blog.utils;
 
 
-import com.hacker.blog.entity.Result;
+import com.hacker.blog.result.Result;
 import com.hacker.blog.enumeration.ResultEnum;
 
 /**

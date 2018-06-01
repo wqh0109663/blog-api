@@ -4,9 +4,19 @@ server:
     context-path: /api/v1.0
 
 spring:
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    excluded-view-names:
+    template-resolver-order:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/mydb?characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:3306/mydb?restful?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: Wuqihuan19950903
   jpa:

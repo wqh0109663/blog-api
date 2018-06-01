@@ -1,6 +1,8 @@
 package com.hacker.blog.service;
 
+import com.hacker.blog.result.Result;
 import com.hacker.blog.repository.UserRepository;
+import com.hacker.blog.utils.ResultUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,14 +33,17 @@ public class UserServiceImplTest {
 
     @Test
     public void getAllUser() {
-
+        Result success = ResultUtil.success(userRepository.findAll());
+        System.out.println(success);
     }
 
     @Test
     public void updateUser() {
+
     }
 
     @Test
     public void deleteUserById() {
+
     }
 }
