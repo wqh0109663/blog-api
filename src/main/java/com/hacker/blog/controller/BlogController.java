@@ -2,7 +2,7 @@ package com.hacker.blog.controller;
 
 import com.hacker.blog.entity.Blog;
 import com.hacker.blog.result.Result;
-import com.hacker.blog.service.impl.BlogServiceImpl;
+import com.hacker.blog.service.BlogService;
 import com.hacker.blog.utils.ResultUtil;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 @RestController
 public class BlogController {
     @Resource
-    private BlogServiceImpl blogService;
+    private BlogService blogService;
 
     @ApiOperation(value = "get所有博客", notes = "查找所有博客")
     @GetMapping("/blogs")

@@ -2,7 +2,7 @@ package com.hacker.blog.controller;
 
 import com.hacker.blog.entity.User;
 import com.hacker.blog.result.Result;
-import com.hacker.blog.service.impl.UserServiceImpl;
+import com.hacker.blog.service.UserService;
 import com.hacker.blog.utils.ResultUtil;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 @RestController
 public class UserController {
     @Resource
-    private UserServiceImpl userService;
+    private UserService userService;
 
     /**
      * 查找所有用户信息
